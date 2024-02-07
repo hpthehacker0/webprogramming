@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url("digital-art-background.jpg");
+    background-color: #cccccc;
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,25 +23,16 @@ label {
     margin-bottom: 8px;
 }
 
-input {
+input,
+button {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
 }
 
-.forgot-password {
-    text-align: right;
-    margin-bottom: 16px;
-}
-
-.forgot-password a {
-    color: #3498db;
-    text-decoration: none;
-}
-
 button {
-    background-color: #4caf50;
+    background-color: #5c4caf;
     color: #fff;
     padding: 10px;
     border: none;
@@ -49,15 +41,5 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
-}
-
-.register-link {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.register-link a {
-    color: #3498db;
-    text-decoration: none;
+    background-color: #5aa1d6;
 }
