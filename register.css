@@ -1,36 +1,47 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url(tiles-3840x2400-6042.jpg);
+    background-image: url("Screenshot 2024-02-06 232655.png");
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+   
 }
 
 form {
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(244, 239, 239);
     width: 300px;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
-}
+    color: #ffffff;
+    
+}   
+
 
 input,
-select {
+select,
+button {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
 }
 
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
 button {
+    flex: 1;
     background-color: #4caf50;
     color: #fff;
     padding: 10px;
@@ -40,15 +51,44 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #458ba0;
 }
 
-.cancel-link {
-    margin-top: 10px;
-    text-align: center;
+.name-inputs {
+    display: flex;
+    justify-content: space-between;
 }
 
-.cancel-link a {
+.input-group {
+    width: 48%;
+}
+
+.gender-inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-section {
+    display: flex;
+    align-items: center;
+}
+
+.terms-and-conditions {
+    margin-top: 16px;
+}
+
+.terms-and-conditions label {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.terms-and-conditions a {
     color: #3498db;
     text-decoration: none;
 }

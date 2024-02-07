@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <form onsubmit="register(event)">
+        <label for="profile-icon">Select Profile Icon:</label>
+        <input type="file" id="profile-icon" name="profile-icon" accept="image/*">
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <!-- Rest of the form elements ... -->
+
+        <div class="subscribe-section">
+            <label>
+                <input type="radio" name="subscribe" value="yes"> Subscribe to receive information through email
+            </label>
+        </div>
+
+        <div class="terms-and-conditions">
+            <input type="checkbox" id="agree-terms" name="agree-terms" required>
+            <label for="agree-terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+
+        <div class="cancel-link">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+
+        <!-- Displaying Profile Icon and First Name -->
+        <div class="output">
+            <h2>Registration Details:</h2>
+            <img id="output-profile-icon" alt="Profile Icon">
+            <p id="output-first-name"></p>
+        </div>
+    </form>
+
+    <script>
+        function register(event) {
+            event.preventDefault();
+            // Perform registration logic here (e.g., validate inputs)
+
+            // Display Profile Icon and First Name in the output section
+            const profileIconInput = document.getElementById('profile-icon');
+            const firstNameInput = document.getElementById('first-name');
+            const outputProfileIcon = document.getElementById('output-profile-icon');
+            const outputFirstName = document.getElementById('output-first-name');
+
+            // Set the source of the image to the selected file
+            outputProfileIcon.src = URL.createObjectURL(profileIconInput.files[0]);
+            outputFirstName.textContent = `First Name: ${firstNameInput.value}`;
+        }
+    </script>
+
+</body>
+</html>
